@@ -1,0 +1,30 @@
+.app {
+  width: 90%; margin: 0px auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.menu Button {
+  text-transform: none;
+}
+.menu .login{display: flex; align-items: center; gap: 10px; float: right;}
+
+.page {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.login {
+  display: flex; gap: 15px; flex-direction: column;
+}
+.login Button {
+  text-transform: none;
+  width: 100px;
+}
+
+.messages Button{margin-left:15px; margin-top: 3px;}
