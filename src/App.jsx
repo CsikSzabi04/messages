@@ -16,6 +16,7 @@ import { useState } from 'react'
 import Layout from './Layout.jsx'
 import { useEffect } from 'react'
 import Admin from './pages/Admin.jsx'
+import SignUp from './pages/SignUp.jsx'
 
 export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
@@ -46,6 +47,7 @@ export default function App() {
       { path: "/users", element: <Users db={db}/> },
       { path: "/about", element: <About /> },
       { path: "/admin", element: <Admin /> },
+      { path: "/signup", element: <SignUp /> },
       { path: "/login", element: <Login auth={auth} setUser={setUser} /> },
       { path: "*", element: <Notfound /> }
     ]}

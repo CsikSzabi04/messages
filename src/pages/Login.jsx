@@ -39,13 +39,18 @@ export default function Login({auth, setUser}) {
         type="password"
         value={password}
         onChange={e => setPassword(e.target.value)}
-        helperText={loginError ? "Hibás felhasználónév vagy jelszó" : "Kérem, jelentkezzen be "}
+        helperText={loginError ? "Wrong username or password!" : "Please Login!"}
       />
       <Button
         variant="contained"
         color="success"
         onClick={login}
       >Login</Button>
+      <Button
+            variant="contained"
+            >
+        Sign up
+      </Button>
     </div>
   )
 }

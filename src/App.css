@@ -1,11 +1,12 @@
 .app {
-  width: 80%; margin: 0px auto;
+  width: 50%; margin: 0px auto; padding: 10px;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 .menu Button {
   text-transform: none;
@@ -13,10 +14,10 @@
 .menu .login{display: flex; align-items: center; gap: 10px; float: right;}
 
 .page {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.904);
   border: 1px solid lightgrey;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .login {
@@ -27,7 +28,9 @@
   width: 100px;
 }
 
-.messages Button{margin-left:15px; margin-top: 3px;}
+.messages Button{margin-left:15px; margin-top: 3px; }
 .c{margin: 5px 10px;}
 
-.buttongroup{padding: 10px; display: flex;}
+.buttongroup{padding: 10px; display: flex; }
+.del{margin-top: 5px; margin-left: 10px; text-align: center;}
+.del:hover{color: red; cursor: pointer;}
