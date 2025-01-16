@@ -24,6 +24,10 @@ export default function Login({auth, setUser}) {
     }
   }
 
+  function GoToSignUp() {
+    const navigate = useNavigate();
+  }
+
   return (
     <div className='login'>
       <TextField
@@ -48,8 +52,9 @@ export default function Login({auth, setUser}) {
       >Login</Button>
       <Button
             variant="contained"
-            >
-        Sign up
+            onClick={() => navigate('/signup')}
+      >
+      Sign up
       </Button>
     </div>
   )

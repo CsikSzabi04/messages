@@ -20,6 +20,8 @@
   padding: 20px;
 }
 
+.logout{margin: 10px;}
+
 .login {
   display: flex; gap: 15px; flex-direction: column;
 }

@@ -30,7 +30,7 @@ export default function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser)
-      if(currentUser.email == "gay@mail.com") setAdmin(true);
+      if(currentUser  && currentUser.email == "gay@mail.com") setAdmin(true);
       else setAdmin(false);
     });
     return () => unsubscribe;
@@ -40,17 +40,20 @@ export default function App() {
     await signOut(auth);  
   }
 
-    
+
+
   const router = createBrowserRouter([
     { path: "/", element: <Layout user={user} logout={logout} auth={auth}/>, children:[
       { path: "/", element: <Messages user={user} db={db}/> },
       { path: "/users", element: <Users db={db}/> },
       { path: "/about", element: <About /> },
       { path: "/admin", element: <Admin /> },
-      { path: "/signup", element: <SignUp /> },
+      { path: "/signup", element: <SignUp auth={auth} /> },
       { path: "/login", element: <Login auth={auth} setUser={setUser} /> },
       { path: "*", element: <Notfound /> }
-    ]}
+    ]},
+
+
   ]);
   
    return (
